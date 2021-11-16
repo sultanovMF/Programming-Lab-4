@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace Programming_Lab_3 {
     interface IModel {
-        IEnumerable<Node> AllNodes { get; }
+        event Action Changed;
+        LinkedList<Node> AllNodes { get; }
         void AddNode(int value);
         void RemoveLastNode();
+        public void RemoveNode(Node node);
         int Count { get; }
     }
 }
