@@ -43,6 +43,10 @@ namespace Programming_Lab_3 {
         }
         void UpdateView() {
             foreach (IView v in views) v.UpdateView();
+            myDataGridView1.AutoGenerateColumns = true; // в таблице будут все public-свойства узлов
+            myDataGridView1.DataSource = Model.AllNodes.ToArray();
+
+
         }
         public void AddView(IView v) {
             views.Add(v);
@@ -61,6 +65,10 @@ namespace Programming_Lab_3 {
 
         private void RemoveBtn_Click(object sender, EventArgs e) {
             Remove();
+        }
+
+        private void panelView1_Paint(object sender, PaintEventArgs e) {
+
         }
     }
 }

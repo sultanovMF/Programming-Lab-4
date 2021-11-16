@@ -27,11 +27,13 @@
             this.RemoveBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panelView1 = new Programming_Lab_3.PanelView();
+            this.myDataGridView1 = new Programming_Lab_3.MyDataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.myDataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // AddBtn
             // 
-            this.AddBtn.Location = new System.Drawing.Point(581, 409);
+            this.AddBtn.Location = new System.Drawing.Point(32, 400);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(94, 29);
             this.AddBtn.TabIndex = 0;
@@ -41,7 +43,7 @@
             // 
             // RemoveBtn
             // 
-            this.RemoveBtn.Location = new System.Drawing.Point(681, 409);
+            this.RemoveBtn.Location = new System.Drawing.Point(132, 400);
             this.RemoveBtn.Name = "RemoveBtn";
             this.RemoveBtn.Size = new System.Drawing.Size(94, 29);
             this.RemoveBtn.TabIndex = 1;
@@ -52,7 +54,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(342, 409);
+            this.label1.Location = new System.Drawing.Point(317, 404);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 20);
             this.label1.TabIndex = 2;
@@ -64,21 +66,33 @@
             this.panelView1.Location = new System.Drawing.Point(32, 39);
             this.panelView1.Model = null;
             this.panelView1.Name = "panelView1";
-            this.panelView1.Size = new System.Drawing.Size(731, 338);
+            this.panelView1.Size = new System.Drawing.Size(330, 338);
             this.panelView1.TabIndex = 3;
-            
+            this.panelView1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelView1_Paint);
+            // 
+            // myDataGridView1
+            // 
+            this.myDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.myDataGridView1.Location = new System.Drawing.Point(413, 39);
+            this.myDataGridView1.Name = "myDataGridView1";
+            this.myDataGridView1.RowHeadersWidth = 51;
+            this.myDataGridView1.RowTemplate.Height = 29;
+            this.myDataGridView1.Size = new System.Drawing.Size(362, 338);
+            this.myDataGridView1.TabIndex = 4;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 456);
+            this.Controls.Add(this.myDataGridView1);
             this.Controls.Add(this.panelView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.RemoveBtn);
             this.Controls.Add(this.AddBtn);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.myDataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -90,6 +104,7 @@
         private System.Windows.Forms.Button RemoveBtn;
         private System.Windows.Forms.Label label1;
         private PanelView panelView1;
+        private MyDataGridView myDataGridView1;
     }
 }
 
