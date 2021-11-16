@@ -14,12 +14,17 @@ namespace Programming_Lab_3 {
         static Random r = new Random();
         IModel model;
         public Form1() {
+            panelView1 = new PanelView();
             InitializeComponent();
-            IView labView;
-            labView = new LabelView(label1);
+            IView labView = new LabelView(label1);
             model = new MyModel();
             labView.Model = model;
             AddView(labView);
+
+
+            panelView1.Model = model;
+            AddView(panelView1);
+
             UpdateView();
         }
 

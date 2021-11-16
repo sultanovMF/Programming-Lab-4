@@ -10,6 +10,8 @@ namespace Programming_Lab_3 {
         static Random r = new Random();
         public int Count => nodes.Count;
 
+        public IEnumerable<Node> AllNodes => nodes;
+
         public void AddNode(int value) {
             nodes.AddFirst(new Node(value, r.Next(10), r.Next(10)));
         }
