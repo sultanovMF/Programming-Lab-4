@@ -11,6 +11,6 @@ namespace Programming_Lab_4 {
         public void Draft();
         void Shift(int from, int to);
         void Undo();
-
+        void UndoAll();
     }
 }

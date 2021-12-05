@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 namespace Programming_Lab_4 {
     internal class StackModel : IStackModel {
         public event Action Changed;
-        int move_id = 0;
         Stack<Pair> moves = new Stack<Pair>();
         Stack<Element>[] stacks = new Stack<Element>[3];
         string message;
@@ -27,6 +26,8 @@ namespace Programming_Lab_4 {
         }
 
         public void Draft() {
+            moves.Clear();
+            stacks[0].Clear();
             stacks[1].Clear();
             stacks[2].Clear();
             for (int i = 0; i < 10; i++) {
@@ -40,26 +41,37 @@ namespace Programming_Lab_4 {
             if (Changed != null) Changed();
         }
         public void Shift(int from, int to) {
-            moves.Push(new Pair(from, to));
-
             if (stacks[from].IsEmpty()) {
                 message = "Перекладывать нечего!";
                 if (Changed != null) Changed();
                 return;
             }
+            moves.Push(new Pair(from, to));
+            MakeShift(from, to);
+
+            if (Changed != null) Changed();
+
+        }
+        private void MakeShift(int from, int to) {
             Element el = stacks[from].Pop();
             el.Y = panel_height - el.Height * (stacks[to].Top + 2) - 1;
             stacks[to].Push(el);
             message = $"Элемент был переложен с {from} на {to}";
+        }
+        public void Undo() {
+            if (moves.Count > 0) {
+                Pair move = moves.Pop();
+                MakeShift(move.Second, move.First);
+            }
 
             if (Changed != null) Changed();
         }
 
-        public void Undo() {
-            if (moves.Count > 0) {
-                Pair move = moves.Pop();
-                Shift(move.Second, move.First);
+        public void UndoAll() {
+            while (moves.Count > 0) {
+                Undo();
             }
+
         }
     }
 }

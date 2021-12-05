@@ -126,6 +126,7 @@
             this.Drop.TabIndex = 11;
             this.Drop.Text = "Сбросить";
             this.Drop.UseVisualStyleBackColor = true;
+            this.Drop.Click += new System.EventHandler(this.Draft);
             // 
             // CancelLast
             // 
@@ -135,6 +136,7 @@
             this.CancelLast.TabIndex = 12;
             this.CancelLast.Text = "Отменить ход";
             this.CancelLast.UseVisualStyleBackColor = true;
+            this.CancelLast.Click += new System.EventHandler(this.CancelLast_Click);
             // 
             // Message
             // 

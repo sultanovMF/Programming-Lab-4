@@ -16,6 +16,7 @@ namespace Programming_Lab_4 {
             rodPanelView0 = new RodPanelView(0);
             rodPanelView1 = new RodPanelView(1);
             rodPanelView2 = new RodPanelView(2);
+            //Message = new LabelView();
             InitializeComponent();
             model = new StackModel(250, 250);
             rodPanelView0.Model = model;
@@ -70,6 +71,11 @@ namespace Programming_Lab_4 {
             model.Shift(2, 1);
         }
 
-
+        private void CancelLast_Click(object sender, EventArgs e) {
+            model.Undo();
+        }
+        private void Draft(object sender, EventArgs e) {
+            model.UndoAll();
+        }
     }
 }
