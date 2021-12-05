@@ -6,13 +6,20 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Programming_Lab_4 {
-    internal class Stack : IEnumerable {
+    internal class Stack  {
         public static readonly int MAX = 10;
         Element[] stack = new Element[MAX];
         int top;
 
         public Stack() {
             top = -1;
+        }
+
+        public int Top {
+            get {
+                return top;
+            }
+
         }
 
         internal bool Push(Element el) {
@@ -41,9 +48,15 @@ namespace Programming_Lab_4 {
                 Pop();
             }
         }
-
-        public IEnumerator GetEnumerator() {
-            return stack.GetEnumerator();
+        public Element this[int key] {
+            get => stack[key];
+            set {
+                stack[key] = value;
+            }
         }
+        public int Count => top + 1; 
+        //public IEnumerator GetEnumerator() {
+        //    return stack.GetEnumerator();
+        //}
     }
 }

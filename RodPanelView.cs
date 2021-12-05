@@ -25,17 +25,16 @@ namespace Programming_Lab_4 {
 
         protected override void OnPaint(PaintEventArgs e) {
             base.OnPaint(e);
-            if (Model == null) return;
             Graphics g = e.Graphics;
-            foreach (Element el in Model.GetStack(id)) { 
+            g.Clear(Color.White);
+            if (Model == null) return;
+            if (Model.GetStack(id).IsEmpty()) return;
+
+            
+            for (int i = 0; i < Model.GetStack(id).Count; i++) {
+                Element el = Model.GetStack(id)[i];
                 g.DrawRectangle(Pens.Black, el.X, el.Y, el.Width, el.Height);
             }
-            //base.OnPaint(e);
-            //if (Model == null) return;
-            //Graphics g = e.Graphics;
-            //foreach (Node n in Model.AllNodes) {
-            //    g.DrawRectangle(Pens.Black, n.X * 20, n.Y * 20, 20, 20);
-            //}
         }
 
     }

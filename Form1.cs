@@ -14,12 +14,16 @@ namespace Programming_Lab_4 {
         IStackModel model;
         public Form1() {
             rodPanelView0 = new RodPanelView(0);
-            rodPanelView0 = new RodPanelView(1);
-            rodPanelView1 = new RodPanelView(2);
+            rodPanelView1 = new RodPanelView(1);
+            rodPanelView2 = new RodPanelView(2);
             InitializeComponent();
             model = new StackModel(250, 250);
             rodPanelView0.Model = model;
+            rodPanelView1.Model = model;
+            rodPanelView2.Model = model;
             AddView(rodPanelView0);
+            AddView(rodPanelView1);
+            AddView(rodPanelView2);
         }
 
 
@@ -45,8 +49,5 @@ namespace Programming_Lab_4 {
             //    model.RemoveLastNode();
         }
 
-        private void button1_Click(object sender, EventArgs e) {
-
-        }
     }
 }

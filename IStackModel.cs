@@ -8,7 +8,7 @@ namespace Programming_Lab_4 {
     internal interface IStackModel {
         event Action Changed;
         public Stack GetStack(int id);
-        public void Draft(int width, int height);
+        public void Draft();
         void Shift(int from, int to);
         //LinkedList<Node> AllNodes { get; }
         //void AddNode(int value);

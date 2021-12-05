@@ -123,7 +123,6 @@
             this.Drop.TabIndex = 11;
             this.Drop.Text = "Сбросить";
             this.Drop.UseVisualStyleBackColor = true;
-            this.Drop.Click += new System.EventHandler(this.button1_Click);
             // 
             // CancelLast
             // 
