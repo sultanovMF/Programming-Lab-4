@@ -23,9 +23,6 @@
         ///  the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.rodPanelView0 = new Programming_Lab_4.RodPanelView(0);
-            this.rodPanelView1 = new Programming_Lab_4.RodPanelView(1);
-            this.rodPanelView2 = new Programming_Lab_4.RodPanelView(2);
             this.From1to2 = new System.Windows.Forms.Button();
             this.From1to3 = new System.Windows.Forms.Button();
             this.From2to1 = new System.Windows.Forms.Button();
@@ -69,6 +66,7 @@
             this.From1to2.TabIndex = 5;
             this.From1to2.Text = "Переместить на 2";
             this.From1to2.UseVisualStyleBackColor = true;
+            this.From1to2.Click += new System.EventHandler(this.From1to2_Click);
             // 
             // From1to3
             // 
@@ -78,6 +76,7 @@
             this.From1to3.TabIndex = 6;
             this.From1to3.Text = "Переместить на 3";
             this.From1to3.UseVisualStyleBackColor = true;
+            this.From1to3.Click += new System.EventHandler(this.From1to3_Click);
             // 
             // From2to1
             // 
@@ -87,6 +86,7 @@
             this.From2to1.TabIndex = 7;
             this.From2to1.Text = "Переместить на 1";
             this.From2to1.UseVisualStyleBackColor = true;
+            this.From2to1.Click += new System.EventHandler(this.From2to1_Click);
             // 
             // From3to1
             // 
@@ -96,6 +96,7 @@
             this.From3to1.TabIndex = 8;
             this.From3to1.Text = "Переместить на 1";
             this.From3to1.UseVisualStyleBackColor = true;
+            this.From3to1.Click += new System.EventHandler(this.From3to1_Click);
             // 
             // From2to3
             // 
@@ -105,6 +106,7 @@
             this.From2to3.TabIndex = 9;
             this.From2to3.Text = "Переместить на 3";
             this.From2to3.UseVisualStyleBackColor = true;
+            this.From2to3.Click += new System.EventHandler(this.From2to3_Click);
             // 
             // From3to2
             // 
@@ -114,6 +116,7 @@
             this.From3to2.TabIndex = 10;
             this.From3to2.Text = "Переместить на 2";
             this.From3to2.UseVisualStyleBackColor = true;
+            this.From3to2.Click += new System.EventHandler(this.From3to2_Click);
             // 
             // Drop
             // 

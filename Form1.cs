@@ -49,5 +49,27 @@ namespace Programming_Lab_4 {
             //    model.RemoveLastNode();
         }
 
+        private void From1to2_Click(object sender, EventArgs e) {
+            model.Shift(0, 1);
+        }
+
+        private void From1to3_Click(object sender, EventArgs e) {
+            model.Shift(0, 2);
+        }
+
+        private void From2to1_Click(object sender, EventArgs e) {
+            model.Shift(1, 0);
+        }
+        private void From2to3_Click(object sender, EventArgs e) {
+            model.Shift(1, 2);
+        }
+        private void From3to1_Click(object sender, EventArgs e) {
+            model.Shift(2, 0);
+        }
+        private void From3to2_Click(object sender, EventArgs e) {
+            model.Shift(2, 1);
+        }
+
+
     }
 }
