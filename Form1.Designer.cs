@@ -31,7 +31,7 @@
             this.From3to2 = new System.Windows.Forms.Button();
             this.Drop = new System.Windows.Forms.Button();
             this.CancelLast = new System.Windows.Forms.Button();
-            this.Message = new System.Windows.Forms.Label();
+            this.Message = new LabelView();
             this.SuspendLayout();
             // 
             // rodPanelView0
@@ -145,7 +145,7 @@
             this.Message.Name = "Message";
             this.Message.Size = new System.Drawing.Size(50, 20);
             this.Message.TabIndex = 13;
-            this.Message.Text = "label1";
+            this.Message.Text = "Готово к работе!";
             // 
             // Form1
             // 
@@ -183,7 +183,7 @@
         private System.Windows.Forms.Button From3to2;
         private System.Windows.Forms.Button Drop;
         private System.Windows.Forms.Button CancelLast;
-        private System.Windows.Forms.Label Message;
+        private LabelView Message;
     }
 }
 

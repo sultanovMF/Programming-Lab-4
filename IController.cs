@@ -5,10 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Programming_Lab_4 {
-    interface IController {
+   interface IController {
         IStackModel Model { get; set; }
-        void AddView(IView v);
-        void Add();
-        void Remove();
+        public void From1to2_Click(object sender, EventArgs e);
+        public void From1to3_Click(object sender, EventArgs e);
+        public void From2to1_Click(object sender, EventArgs e);
+        public void From2to3_Click(object sender, EventArgs e);
+        public void From3to1_Click(object sender, EventArgs e);
+        public void From3to2_Click(object sender, EventArgs e);
+        public void CancelLast_Click(object sender, EventArgs e);
+        public void Draft(object sender, EventArgs e);
+        
     }
 }

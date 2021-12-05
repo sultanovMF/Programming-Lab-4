@@ -13,15 +13,20 @@ namespace Programming_Lab_4 {
         static Random r = new Random();
         IStackModel model;
         public Form1() {
-            rodPanelView0 = new RodPanelView(0);
-            rodPanelView1 = new RodPanelView(1);
-            rodPanelView2 = new RodPanelView(2);
-            //Message = new LabelView();
+            this.rodPanelView0 = new RodPanelView(0);
+            this.rodPanelView1 = new RodPanelView(1);
+            this.rodPanelView2 = new RodPanelView(2);
             InitializeComponent();
+
+            
+
             model = new StackModel(250, 250);
+            Message.Model = model;
             rodPanelView0.Model = model;
             rodPanelView1.Model = model;
             rodPanelView2.Model = model;
+            
+            AddView(Message);
             AddView(rodPanelView0);
             AddView(rodPanelView1);
             AddView(rodPanelView2);
@@ -37,45 +42,41 @@ namespace Programming_Lab_4 {
             }
         }
 
-        public void Add() {
-            //model.AddNode(r.Next(100));
-        }
         public void AddView(IView v) {
             model.Changed += new Action(v.UpdateView);
         }
 
 
-        public void Remove() {
-            //if (model.Count > 0)
-            //    model.RemoveLastNode();
-        }
-
-        private void From1to2_Click(object sender, EventArgs e) {
+        public void From1to2_Click(object sender, EventArgs e) {
             model.Shift(0, 1);
         }
 
-        private void From1to3_Click(object sender, EventArgs e) {
+        public void From1to3_Click(object sender, EventArgs e) {
             model.Shift(0, 2);
         }
 
-        private void From2to1_Click(object sender, EventArgs e) {
+        public void From2to1_Click(object sender, EventArgs e) {
             model.Shift(1, 0);
         }
-        private void From2to3_Click(object sender, EventArgs e) {
+        public void From2to3_Click(object sender, EventArgs e) {
             model.Shift(1, 2);
         }
-        private void From3to1_Click(object sender, EventArgs e) {
+        public void From3to1_Click(object sender, EventArgs e) {
             model.Shift(2, 0);
         }
-        private void From3to2_Click(object sender, EventArgs e) {
+        public void From3to2_Click(object sender, EventArgs e) {
             model.Shift(2, 1);
         }
 
-        private void CancelLast_Click(object sender, EventArgs e) {
+        public void CancelLast_Click(object sender, EventArgs e) {
             model.Undo();
         }
-        private void Draft(object sender, EventArgs e) {
+        public void Draft(object sender, EventArgs e) {
             model.UndoAll();
+        }
+
+        private void rodPanelView1_Paint(object sender, PaintEventArgs e) {
+
         }
     }
 }

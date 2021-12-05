@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Programming_Lab_4 {
-    internal class StackModel : IStackModel {
+    class StackModel : IStackModel {
         public event Action Changed;
         Stack<Pair> moves = new Stack<Pair>();
         Stack<Element>[] stacks = new Stack<Element>[3];
@@ -20,11 +20,11 @@ namespace Programming_Lab_4 {
             stacks[2] = new Stack<Element>();
             Draft();
             message = "Готово к использованию!";
+
         }
         public Stack<Element> GetStack(int id) {
             return stacks[id];
         }
-
         public void Draft() {
             moves.Clear();
             stacks[0].Clear();
@@ -56,22 +56,32 @@ namespace Programming_Lab_4 {
             Element el = stacks[from].Pop();
             el.Y = panel_height - el.Height * (stacks[to].Top + 2) - 1;
             stacks[to].Push(el);
-            message = $"Элемент был переложен с {from} на {to}";
+            message = $"Элемент был переложен с {from + 1} на {to + 1}";
         }
         public void Undo() {
             if (moves.Count > 0) {
                 Pair move = moves.Pop();
                 MakeShift(move.Second, move.First);
+                message = $"Отменяется действие ({move.First}, {move.Second})";
             }
-
+            
             if (Changed != null) Changed();
         }
 
         public void UndoAll() {
+            if (moves.Count == 0) {
+                message = $"Нечего менять!";
+                return;
+            }
             while (moves.Count > 0) {
                 Undo();
             }
+            message = $"Все действия были отменены";
+            if (Changed != null) Changed();
+        }
 
+        public string Message() {
+            return message;
         }
     }
 }

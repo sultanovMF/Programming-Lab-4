@@ -1,16 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing;
+using System.Collections.Generic;
 namespace Programming_Lab_4 {
-    internal class LabelView : IView {
+    class LabelView : Label, IView{
         IStackModel model;
-        Label l;
-        public LabelView(Label l) {
-            this.l = l;
-        }
 
         public IStackModel Model {
             get {
@@ -23,7 +17,7 @@ namespace Programming_Lab_4 {
 
       
         public void UpdateView() {
-            //l.Text = model.Count.ToString();
+            Text = model.Message();
         }
     }
 }

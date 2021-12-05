@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Programming_Lab_4 {
-    internal class Pair {
+    class Pair {
         int first, second;
         public int First {
             get { return first; }

@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Programming_Lab_4 {
-    internal class Stack<T>  {
+    class Stack<T>  {
         public static readonly int MAX = 10000;
         T[] stack = new T[MAX];
         int top;
@@ -22,7 +22,7 @@ namespace Programming_Lab_4 {
 
         }
 
-        internal bool Push(T el) {
+        public bool Push(T el) {
             if (top >= MAX) {
                 return false;
             } else {
@@ -31,7 +31,7 @@ namespace Programming_Lab_4 {
             }
         }
 
-        internal T Pop() {
+        public T Pop() {
             if (top < 0) {
                 throw new Exception("Stack underflow!");
             } 
@@ -39,11 +39,11 @@ namespace Programming_Lab_4 {
             return el;
         }
 
-        internal bool IsEmpty() {
+        public bool IsEmpty() {
             return (top < 0);
         }
 
-        internal void Clear() {
+        public void Clear() {
             for (int i = 0; i <= top; i++ ) {
                 Pop();
             }

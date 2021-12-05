@@ -5,12 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Programming_Lab_4 {
-    internal interface IStackModel {
+    interface IStackModel {
         event Action Changed;
         public Stack<Element> GetStack(int id);
         public void Draft();
         void Shift(int from, int to);
         void Undo();
         void UndoAll();
+
+        public string Message();
     }
 }
