@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Programming_Lab_3 {
+namespace Programming_Lab_4 {
     internal class MyDataGridView : DataGridView, IView {
         IModel model;
         public IModel Model {

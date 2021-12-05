@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Programming_Lab_3 {
+namespace Programming_Lab_4 {
     class MyModel : IModel {
         public event Action Changed;
         LinkedList<Node> nodes = new LinkedList<Node>();

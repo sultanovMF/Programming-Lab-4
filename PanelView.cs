@@ -3,7 +3,7 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.Collections.Generic;
 
-namespace Programming_Lab_3 {
+namespace Programming_Lab_4 {
     delegate void NodeClicked(Node node);
     internal class PanelView : Panel, IView {
         public event NodeClicked NodeClicked;

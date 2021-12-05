@@ -1,4 +1,4 @@
-﻿namespace Programming_Lab_3 {
+﻿namespace Programming_Lab_4 {
     partial class Form1 {
         /// <summary>
         ///  Required designer variable.
@@ -26,8 +26,8 @@
             this.AddBtn = new System.Windows.Forms.Button();
             this.RemoveBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.panelView1 = new Programming_Lab_3.PanelView();
-            this.myDataGridView1 = new Programming_Lab_3.MyDataGridView();
+            this.panelView1 = new Programming_Lab_4.PanelView();
+            this.myDataGridView1 = new Programming_Lab_4.MyDataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.myDataGridView1)).BeginInit();
             this.SuspendLayout();
             // 

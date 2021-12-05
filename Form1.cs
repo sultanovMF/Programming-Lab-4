@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Programming_Lab_3 {
+namespace Programming_Lab_4 {
     partial class Form1 : Form, IController {
         static Random r = new Random();
         IModel model;
