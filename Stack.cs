@@ -6,9 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Programming_Lab_4 {
-    internal class Stack  {
-        public static readonly int MAX = 10;
-        Element[] stack = new Element[MAX];
+    internal class Stack<T>  {
+        public static readonly int MAX = 10000;
+        T[] stack = new T[MAX];
         int top;
 
         public Stack() {
@@ -22,7 +22,7 @@ namespace Programming_Lab_4 {
 
         }
 
-        internal bool Push(Element el) {
+        internal bool Push(T el) {
             if (top >= MAX) {
                 return false;
             } else {
@@ -31,11 +31,11 @@ namespace Programming_Lab_4 {
             }
         }
 
-        internal Element Pop() {
+        internal T Pop() {
             if (top < 0) {
                 throw new Exception("Stack underflow!");
             } 
-            Element el = stack[top--];
+            T el = stack[top--];
             return el;
         }
 
@@ -48,7 +48,7 @@ namespace Programming_Lab_4 {
                 Pop();
             }
         }
-        public Element this[int key] {
+        public T this[int key] {
             get => stack[key];
             set {
                 stack[key] = value;
