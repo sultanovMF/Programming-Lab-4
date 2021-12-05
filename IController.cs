@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Programming_Lab_4 {
     interface IController {
-        IModel Model { get; set; }
+        IStackModel Model { get; set; }
         void AddView(IView v);
         void Add();
         void Remove();

@@ -11,35 +11,19 @@ using System.Windows.Forms;
 namespace Programming_Lab_4 {
     partial class Form1 : Form, IController {
         static Random r = new Random();
-        IModel model;
+        IStackModel model;
         public Form1() {
-            panelView1 = new PanelView();
-            
-            myDataGridView1 = new MyDataGridView();
-
+            rodPanelView0 = new RodPanelView(0);
+            rodPanelView0 = new RodPanelView(1);
+            rodPanelView1 = new RodPanelView(2);
             InitializeComponent();
-
-            IView labView = new LabelView(label1);
-            model = new MyModel();
-
-            myDataGridView1.Model = model;
-            AddView(myDataGridView1);
-
-            labView.Model = model;
-            AddView(labView);
-
-            panelView1.Model = model;
-            panelView1.NodeClicked += PanelView1_NodeClicked;
-            AddView(panelView1);
-
-            
+            model = new StackModel(250, 250);
+            rodPanelView0.Model = model;
+            AddView(rodPanelView0);
         }
 
-        private void PanelView1_NodeClicked(Node node) {
-            model.RemoveNode(node);
-        }
 
-        public IModel Model {
+        public IStackModel Model {
             get {
                 return model;
             }
@@ -49,7 +33,7 @@ namespace Programming_Lab_4 {
         }
 
         public void Add() {
-            model.AddNode(r.Next(100));
+            //model.AddNode(r.Next(100));
         }
         public void AddView(IView v) {
             model.Changed += new Action(v.UpdateView);
@@ -57,19 +41,11 @@ namespace Programming_Lab_4 {
 
 
         public void Remove() {
-            if (model.Count > 0)
-                model.RemoveLastNode();
+            //if (model.Count > 0)
+            //    model.RemoveLastNode();
         }
 
-        private void AddBtn_Click(object sender, EventArgs e) {
-            Add();
-        }
-
-        private void RemoveBtn_Click(object sender, EventArgs e) {
-            Remove();
-        }
-
-        private void panelView1_Paint(object sender, PaintEventArgs e) {
+        private void button1_Click(object sender, EventArgs e) {
 
         }
     }

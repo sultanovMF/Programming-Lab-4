@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 namespace Programming_Lab_4 {
     internal class LabelView : IView {
-        IModel model;
+        IStackModel model;
         Label l;
         public LabelView(Label l) {
             this.l = l;
         }
 
-        public IModel Model {
+        public IStackModel Model {
             get {
                 return model;
             }
@@ -23,7 +23,7 @@ namespace Programming_Lab_4 {
 
       
         public void UpdateView() {
-            l.Text = model.Count.ToString();
+            //l.Text = model.Count.ToString();
         }
     }
 }

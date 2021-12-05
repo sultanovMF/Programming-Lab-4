@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Programming_Lab_4 {
     interface IView {
-        IModel Model { get; set; }
+        IStackModel Model { get; set; }
         void UpdateView();
     }
 }

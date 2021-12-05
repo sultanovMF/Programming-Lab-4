@@ -23,88 +23,163 @@
         ///  the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.AddBtn = new System.Windows.Forms.Button();
-            this.RemoveBtn = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panelView1 = new Programming_Lab_4.PanelView();
-            this.myDataGridView1 = new Programming_Lab_4.MyDataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.myDataGridView1)).BeginInit();
+            this.rodPanelView0 = new Programming_Lab_4.RodPanelView(0);
+            this.rodPanelView1 = new Programming_Lab_4.RodPanelView(1);
+            this.rodPanelView2 = new Programming_Lab_4.RodPanelView(2);
+            this.From1to2 = new System.Windows.Forms.Button();
+            this.From1to3 = new System.Windows.Forms.Button();
+            this.From2to1 = new System.Windows.Forms.Button();
+            this.From3to1 = new System.Windows.Forms.Button();
+            this.From2to3 = new System.Windows.Forms.Button();
+            this.From3to2 = new System.Windows.Forms.Button();
+            this.Drop = new System.Windows.Forms.Button();
+            this.CancelLast = new System.Windows.Forms.Button();
+            this.Message = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // AddBtn
+            // rodPanelView0
             // 
-            this.AddBtn.Location = new System.Drawing.Point(32, 400);
-            this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(94, 29);
-            this.AddBtn.TabIndex = 0;
-            this.AddBtn.Text = "Add";
-            this.AddBtn.UseVisualStyleBackColor = true;
-            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
+            this.rodPanelView0.Location = new System.Drawing.Point(12, 12);
+            this.rodPanelView0.Model = null;
+            this.rodPanelView0.Name = "rodPanelView0";
+            this.rodPanelView0.Size = new System.Drawing.Size(250, 250);
+            this.rodPanelView0.TabIndex = 2;
             // 
-            // RemoveBtn
+            // rodPanelView1
             // 
-            this.RemoveBtn.Location = new System.Drawing.Point(132, 400);
-            this.RemoveBtn.Name = "RemoveBtn";
-            this.RemoveBtn.Size = new System.Drawing.Size(94, 29);
-            this.RemoveBtn.TabIndex = 1;
-            this.RemoveBtn.Text = "Remove";
-            this.RemoveBtn.UseVisualStyleBackColor = true;
-            this.RemoveBtn.Click += new System.EventHandler(this.RemoveBtn_Click);
+            this.rodPanelView1.Location = new System.Drawing.Point(268, 12);
+            this.rodPanelView1.Model = null;
+            this.rodPanelView1.Name = "rodPanelView1";
+            this.rodPanelView1.Size = new System.Drawing.Size(250, 250);
+            this.rodPanelView1.TabIndex = 3;
             // 
-            // label1
+            // rodPanelView2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(317, 404);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 20);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Label";
+            this.rodPanelView2.Location = new System.Drawing.Point(523, 12);
+            this.rodPanelView2.Model = null;
+            this.rodPanelView2.Name = "rodPanelView2";
+            this.rodPanelView2.Size = new System.Drawing.Size(250, 250);
+            this.rodPanelView2.TabIndex = 4;
             // 
-            // panelView1
+            // From1to2
             // 
-            this.panelView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelView1.Location = new System.Drawing.Point(32, 39);
-            this.panelView1.Model = null;
-            this.panelView1.Name = "panelView1";
-            this.panelView1.Size = new System.Drawing.Size(330, 338);
-            this.panelView1.TabIndex = 3;
-            this.panelView1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelView1_Paint);
+            this.From1to2.Location = new System.Drawing.Point(14, 280);
+            this.From1to2.Name = "From1to2";
+            this.From1to2.Size = new System.Drawing.Size(248, 29);
+            this.From1to2.TabIndex = 5;
+            this.From1to2.Text = "Переместить на 2";
+            this.From1to2.UseVisualStyleBackColor = true;
             // 
-            // myDataGridView1
+            // From1to3
             // 
-            this.myDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.myDataGridView1.Location = new System.Drawing.Point(413, 39);
-            this.myDataGridView1.Name = "myDataGridView1";
-            this.myDataGridView1.RowHeadersWidth = 51;
-            this.myDataGridView1.RowTemplate.Height = 29;
-            this.myDataGridView1.Size = new System.Drawing.Size(362, 338);
-            this.myDataGridView1.TabIndex = 4;
+            this.From1to3.Location = new System.Drawing.Point(14, 322);
+            this.From1to3.Name = "From1to3";
+            this.From1to3.Size = new System.Drawing.Size(248, 29);
+            this.From1to3.TabIndex = 6;
+            this.From1to3.Text = "Переместить на 3";
+            this.From1to3.UseVisualStyleBackColor = true;
+            // 
+            // From2to1
+            // 
+            this.From2to1.Location = new System.Drawing.Point(268, 280);
+            this.From2to1.Name = "From2to1";
+            this.From2to1.Size = new System.Drawing.Size(248, 29);
+            this.From2to1.TabIndex = 7;
+            this.From2to1.Text = "Переместить на 1";
+            this.From2to1.UseVisualStyleBackColor = true;
+            // 
+            // From3to1
+            // 
+            this.From3to1.Location = new System.Drawing.Point(525, 280);
+            this.From3to1.Name = "From3to1";
+            this.From3to1.Size = new System.Drawing.Size(248, 29);
+            this.From3to1.TabIndex = 8;
+            this.From3to1.Text = "Переместить на 1";
+            this.From3to1.UseVisualStyleBackColor = true;
+            // 
+            // From2to3
+            // 
+            this.From2to3.Location = new System.Drawing.Point(268, 322);
+            this.From2to3.Name = "From2to3";
+            this.From2to3.Size = new System.Drawing.Size(248, 29);
+            this.From2to3.TabIndex = 9;
+            this.From2to3.Text = "Переместить на 3";
+            this.From2to3.UseVisualStyleBackColor = true;
+            // 
+            // From3to2
+            // 
+            this.From3to2.Location = new System.Drawing.Point(525, 322);
+            this.From3to2.Name = "From3to2";
+            this.From3to2.Size = new System.Drawing.Size(248, 29);
+            this.From3to2.TabIndex = 10;
+            this.From3to2.Text = "Переместить на 2";
+            this.From3to2.UseVisualStyleBackColor = true;
+            // 
+            // Drop
+            // 
+            this.Drop.Location = new System.Drawing.Point(21, 415);
+            this.Drop.Name = "Drop";
+            this.Drop.Size = new System.Drawing.Size(241, 29);
+            this.Drop.TabIndex = 11;
+            this.Drop.Text = "Сбросить";
+            this.Drop.UseVisualStyleBackColor = true;
+            this.Drop.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // CancelLast
+            // 
+            this.CancelLast.Location = new System.Drawing.Point(21, 380);
+            this.CancelLast.Name = "CancelLast";
+            this.CancelLast.Size = new System.Drawing.Size(241, 29);
+            this.CancelLast.TabIndex = 12;
+            this.CancelLast.Text = "Отменить ход";
+            this.CancelLast.UseVisualStyleBackColor = true;
+            // 
+            // Message
+            // 
+            this.Message.AutoSize = true;
+            this.Message.Location = new System.Drawing.Point(278, 380);
+            this.Message.Name = "Message";
+            this.Message.Size = new System.Drawing.Size(50, 20);
+            this.Message.TabIndex = 13;
+            this.Message.Text = "label1";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 456);
-            this.Controls.Add(this.myDataGridView1);
-            this.Controls.Add(this.panelView1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.RemoveBtn);
-            this.Controls.Add(this.AddBtn);
+            this.ClientSize = new System.Drawing.Size(784, 456);
+            this.Controls.Add(this.Message);
+            this.Controls.Add(this.CancelLast);
+            this.Controls.Add(this.Drop);
+            this.Controls.Add(this.From3to2);
+            this.Controls.Add(this.From2to3);
+            this.Controls.Add(this.From3to1);
+            this.Controls.Add(this.From2to1);
+            this.Controls.Add(this.From1to3);
+            this.Controls.Add(this.From1to2);
+            this.Controls.Add(this.rodPanelView2);
+            this.Controls.Add(this.rodPanelView1);
+            this.Controls.Add(this.rodPanelView0);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.myDataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button AddBtn;
-        private System.Windows.Forms.Button RemoveBtn;
-        private System.Windows.Forms.Label label1;
-        private PanelView panelView1;
-        private MyDataGridView myDataGridView1;
+        private RodPanelView rodPanelView0;
+        private RodPanelView rodPanelView1;
+        private RodPanelView rodPanelView2;
+        private System.Windows.Forms.Button From1to2;
+        private System.Windows.Forms.Button From1to3;
+        private System.Windows.Forms.Button From2to1;
+        private System.Windows.Forms.Button From3to1;
+        private System.Windows.Forms.Button From2to3;
+        private System.Windows.Forms.Button From3to2;
+        private System.Windows.Forms.Button Drop;
+        private System.Windows.Forms.Button CancelLast;
+        private System.Windows.Forms.Label Message;
     }
 }
 
