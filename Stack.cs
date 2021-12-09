@@ -22,6 +22,13 @@ namespace Programming_Lab_4 {
 
         }
 
+        public T Peek() {
+            if (top < 0) {
+                throw new Exception("Stack underflow!");
+            }
+            T el = stack[top];
+            return el;
+        }
         public bool Push(T el) {
             if (top >= MAX) {
                 return false;

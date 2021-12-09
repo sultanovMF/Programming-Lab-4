@@ -46,6 +46,14 @@ namespace Programming_Lab_4 {
                 if (Changed != null) Changed();
                 return;
             }
+            if (!stacks[to].IsEmpty()) {
+                if (stacks[to].Peek().Width < stacks[from].Peek().Width) {
+                    message = "Нельзя переложить больший элемент на меньший!";
+                    if (Changed != null) Changed();
+                    return;
+                }
+
+            }
             moves.Push(new Pair(from, to));
             MakeShift(from, to);
 
