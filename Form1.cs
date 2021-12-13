@@ -20,7 +20,7 @@ namespace Programming_Lab_4 {
 
             
 
-            model = new StackModel(250, 250);
+            model = new StackModel(220, 187);
             Message.Model = model;
             rodPanelView0.Model = model;
             rodPanelView1.Model = model;
